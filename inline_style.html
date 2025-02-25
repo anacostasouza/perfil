@@ -1,36 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <title>Minha Esposa</title>	
     <meta charset="utf-8">
-
-    <style type="text/css">
-        body {
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: #f5f5f5; /* Adicionei um fundo claro para destacar o conteúdo */
-        }
-
-        #topo {
-            color: rgb(39, 35, 33);
-            font-family: 'Courier New', Courier, monospace;
-            text-align: center;
-        }
-
-        img {
-            border-radius: 10px; /* Bordas arredondadas para a imagem */
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> 
 </head>
 <body>
+    <div class="container">
+        <header>
+            <img src="imagens/anasouza.jpeg" alt="Foto de Ana Souza">
+            <h1>Ana Maria de Souza Costa</h1>
+            <h2>Analista de Sistemas | Desenvolvedora Web | Web Designer Junior </h2>
+            <p class="localizacao"><i class="fas fa-map-marker-alt"></i> Alvorada, Sete Lagoas - Minas Gerais</p> 
+        </header>
 
-    <div id="topo">
-        <img src="https://media.tenor.com/nitvirYpjMMAAAAM/justin-bieber-meme.gif" width="200" alt="Meme Justin Bieber">
-        <p>TE AMO MEU AMOR!</p>
+        <nav class="botoes">
+            <a href="https://www.linkedin.com/in/ana-souza-9831242bb/" target="_blank" class="botao"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="mailto:anamariacostasouza93@gmail.com" class="botao"><i class="fas fa-envelope"></i> Email</a>
+            <a href="tel:+5531999999999" class="botao"><i class="fas fa-phone-alt"></i> Contato</a>
+            <a href="curriculo/ANACURRICULO.pdf" download="Ana Souza Curriculo" class="botao"><i class="fas fa-download"></i> Baixar Currículo</a>
+        </nav>
+
+        <section class="sobre-mim">
+            <h3><i class="fas fa-user"></i> Sobre Mim</h3>
+            <p>Tenho 19 anos, nasci e cresci na cidade de Sete Lagoas, Minas Gerais. A tecnologia sempre foi meu objetivo e uma paixão que nasceu naturalmente da minha introspecção, gerando mais e mais vontade de adquirir conhecimento.</p>
+            <p>Amo esportes, inclusive futebol, sendo torcedora do Cruzeiro em suas diversas áreas de atuação.</p>
+            <p>Atualmente estou no terceiro semestre da faculdade de Análise e Desenvolvimento de Sistemas pela universidade UNA de Sete Lagoas.</p>
+        </section>
+
+        <section class="habilidades">
+            <h3><i class="fas fa-cogs"></i> Habilidades</h3>
+            <ul>
+                <li><i class="fas fa-database"></i> SQL e Banco de Dados</li>
+                <li><i class="fas fa-laptop-code"></i> Web Design (UX/UI), domínio de softwares como CorelDraw e Photoshop</li>
+                <li><i class="fab fa-html5"></i> HTML, CSS e JavaScript</li>
+                <li><i class="fab fa-java"></i> Conhecimento em Java</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>© 2025 Ana Souza</p>
+        </footer>
     </div>
-
 </body>
 </html>
