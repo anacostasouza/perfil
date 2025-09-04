@@ -1,0 +1,366 @@
+/* Importação de fontes */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+
+/* Variáveis CSS (Root) */
+
+:root {
+    /* Cores do Tema Escuro */
+    --background-dark: #1f2029;
+    --background-card-main: #2a2b36;
+    --background-section-card: #373842;
+    --background-skill-item: #44454e;
+    --background-skill-item-hover: #555660;
+    /* Cores de Texto (ajustadas para fundo escuro) */
+    --text-light-100: #e0e0e0;
+    --text-light-200: #f8f8f8;
+    --text-light-300: #bbbbbb;
+    --text-accent-blue: #8be9fd;
+    --text-accent-green: #36cece;
+    --text-accent-red: #ff5555;
+    --text-footer: #777;
+    /* Cores de Ação/Botões */
+    --action-button-bg: #8be9fd;
+    --action-button-hover-bg: #61dafb;
+    --action-button-text: #222;
+    /* Sombras e Bordas */
+    --shadow-card: rgba(0, 0, 0, 0.4);
+    --shadow-section-card: rgba(0, 0, 0, 0.2);
+    --border-photo: #8be9fd;
+    --shadow-photo: rgba(139, 233, 253, 0.6);
+    --border-divider: #444;
+    --shadow-button-hover: rgba(0, 0, 0, 0.3);
+}
+
+
+/* Estilos globais */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-dark);
+    font-family: 'Sora', sans-serif;
+    color: var(--text-light-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+
+/* Layout de duas colunas */
+
+.main-layout {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+
+/* Painel Esquerdo (Perfil e Projetos) */
+
+.left-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding-top: 0;
+}
+
+.profile-summary h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--text-light-200);
+    margin: 15px 0 5px;
+    line-height: 1.2;
+}
+
+.profile-summary .role {
+    font-size: 1.1em;
+    color: var(--text-light-300);
+    margin: 0 0 10px;
+}
+
+.left-panel .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+    object-fit: cover;
+    border: 3px solid var(--border-photo);
+    box-shadow: 0 0 20px var(--shadow-photo);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.left-panel .profile-photo:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 0 30px var(--shadow-photo);
+}
+
+.github-projects {
+    width: 100%;
+    max-width: 350px;
+    margin-top: 0;
+    text-align: left;
+}
+
+.github-projects h2 {
+    font-size: 1.6em;
+    color: var(--text-light-200);
+    margin-bottom: 20px;
+}
+
+.github-projects h2 i {
+    color: var(--text-accent-blue);
+    margin-right: 10px;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.project-card {
+    background-color: var(--background-section-card);
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text-light-100);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card:hover {
+    background-color: var(--background-skill-item);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3 {
+    font-size: 1.1em;
+    margin: 0 0 5px;
+    color: var(--text-accent-blue);
+}
+
+.project-card p {
+    font-size: 0.9em;
+    margin: 0;
+    color: var(--text-light-300);
+}
+
+
+/* Painel Direito (Container Principal) */
+
+.right-panel {
+    flex: 1.5;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    background-color: var(--background-card-main);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px var(--shadow-card);
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Efeito de brilho nas bordas do card */
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle at center, rgba(139, 233, 253, 0.2) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    animation: rotateGradient 20s linear infinite;
+}
+
+.container:hover::before {
+    opacity: 1;
+}
+
+@keyframes rotateGradient {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Seções, botões e listas (estilos existentes) */
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    animation: slideInUp 1.2s ease-out;
+}
+
+.botao {
+    background-color: var(--action-button-bg);
+    color: var(--action-button-text);
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao i {
+    margin-right: 8px;
+}
+
+.botao:hover {
+    background-color: var(--action-button-hover-bg);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 6px 15px var(--shadow-button-hover);
+}
+
+.card-section {
+    background-color: var(--background-section-card);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-section h3 {
+    font-size: 1.4em;
+    color: var(--text-light-200);
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.card-section h3 i {
+    color: var(--text-accent-blue);
+    margin-right: 10px;
+}
+
+.habilidades ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.habilidades li {
+    background-color: var(--background-skill-item);
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.habilidades li i {
+    color: var(--text-accent-green);
+    margin-right: 10px;
+}
+
+.habilidades li:hover {
+    background-color: var(--background-skill-item-hover);
+    transform: translateX(5px);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.fas fa-user,
+.habilidades card-section {
+    background: radial-gradient(circle at center, rgba(139, 233, 253, 0.2) 0%, transparent 70%);
+}
+
+
+/* Rodapé fixo no final da tela */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--background-dark);
+    border-top: 1px solid var(--border-divider);
+    padding: 10px;
+    font-size: 0.8em;
+    color: var(--text-footer);
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 1000;
+    /* Garante que o rodapé fique acima de outros elementos */
+}
+
+
+/* Responsividade */
+
+@media (max-width: 992px) {
+    body {
+        padding: 10px;
+        padding-bottom: 50px;
+        /* Ajusta o padding para o footer */
+    }
+    .main-layout {
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 20px;
+    }
+    .left-panel,
+    .right-panel {
+        align-items: center;
+        text-align: center;
+    }
+    .github-projects {
+        margin-top: 20px;
+        text-align: center;
+    }
+}
