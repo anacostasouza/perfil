@@ -216,7 +216,7 @@ a:hover {
 }
 
 .hero-content h1 {
-    color: var(--text-secondary);
+    color: var(--accent-blue);
 }
 
 .hero-avatar {
