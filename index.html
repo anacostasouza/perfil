@@ -4,75 +4,259 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ana Souza | Perfil Profissional</title>
+    <title>Ana Souza - Desenvolvedora Web</title>
 
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="assets/icon.png" />
+    <link rel="icon" type="image/svg+xml" href="assets/icon2.png" />
 </head>
 
 <body>
-    <div class="main-layout">
-        <aside class="left-panel">
-            <div class="profile-summary">
-                <img src="assets/imagens/anasouza.jpeg" alt="Foto de perfil de Ana Maria de Souza Costa" class="profile-photo">
-                <h1>Ana Maria de Souza Costa</h1>
-                <p class="role">Analista de Sistemas | Desenvolvedora Web | Web Designer Junior</p>
-                <p class="localizacao"><i class="fas fa-map-marker-alt"></i> Sete Lagoas - Minas Gerais</p>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">Ana Souza</a>
+            <ul class="nav-menu">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <img src="assets/imagens/anasouza.jpeg" alt="Ana Maria de Souza Costa" class="hero-avatar">
+            <h1>Ana Maria de Souza Costa</h1>
+            <p class="hero-subtitle">Desenvolvedora Web</p>
+            <p class="hero-description">Em busca da próxima oportunidade para aplicar minhas habilidades e contribuir com soluções inovadoras.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/5531971864360" target="_blank" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Conversar</a>
+                <a href="curriculo/ANACURRICULO.pdf" download class="btn btn-secondary"><i class="fas fa-download"></i> Currículo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mim -->
+    <section id="sobre" class="section">
+        <div class="container">
+            <h2 class="section-title">Sobre Mim</h2>
+            <p class="section-content">Tenho 21 anos e sou uma desenvolvedora web apaixonada por tecnologia!</p>
+            <p class="section-content">Atualmente no 5º semestre, já tenho experiência prática com desenvolvimento fullstack, design de interfaces e gestão de projetos. Busco oportunidades desafiadoras onde possa contribuir com soluções estruturadas e inovadoras.</p>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-label">Localização</span>
+                    <span class="info-value">Sete Lagoas, MG</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Formação</span>
+                    <span class="info-value">Análise e Desenvolvimento de Sistemas</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Status</span>
+                    <span class="info-value">Aberta a Oportunidades</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades/Ferramentas -->
+    <section id="habilidades" class="section bg-alternate">
+        <div class="container">
+            <h2 class="section-title">Ferramentas & Habilidades</h2>
+            <p class="section-subtitle">Stack de desenvolvimento e design</p>
+            
+            <div class="skills-grid">
+                <div class="skill-card featured">
+                    <h3>React</h3>
+                    <p>Desenvolvimento de interfaces modernas e componentes reutilizáveis com performance otimizada.</p>
+                    <span class="star">★</span>
+                </div>
+                <div class="skill-card featured">
+                    <h3>TypeScript</h3>
+                    <p>Tipagem forte em JavaScript para código mais seguro e manutenível.</p>
+                    <span class="star">★</span>
+                </div>
+                <div class="skill-card featured">
+                    <h3>Node.js</h3>
+                    <p>Desenvolvimento backend com JavaScript, APIs REST e servidores escaláveis.</p>
+                    <span class="star">★</span>
+                </div>
+                <div class="skill-card featured">
+                    <h3>Firebase</h3>
+                    <p>Backend como serviço com autenticação, banco de dados e hospedagem em tempo real.</p>
+                    <span class="star">★</span>
+                </div>
+                <div class="skill-card featured">
+                    <h3>SQL</h3>
+                    <p>Bancos de dados relacionais, queries otimizadas e design de esquemas eficientes.</p>
+                    <span class="star">★</span>
+                </div>
+                <div class="skill-card featured">
+                    <h3>MongoDB</h3>
+                    <p>Banco de dados NoSQL e documentos flexíveis para aplicações modernas.</p>
+                    <span class="star">★</span>
+                </div>
+
+                <div class="skill-card">
+                    <h3>HTML & CSS</h3>
+                    <p>Semântica correta, responsividade e otimização para web.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                    <p>Lógica de programação, DOM manipulation e desenvolvimento dinâmico.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Java</h3>
+                    <p>Programação orientada a objetos e desenvolvimento backend.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Web Design (UX/UI)</h3>
+                    <p>Design de interfaces intuitivas usando Figma, CorelDraw e Photoshop.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Vite & Bundlers</h3>
+                    <p>Ferramentas modernas de build e otimização de projetos.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Git & GitHub</h3>
+                    <p>Controle de versão, colaboração e gestão de repositórios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="section">
+        <div class="container">
+            <h2 class="section-title">Experiência & Projetos</h2>
+            <p class="section-subtitle">Aplicações reais com impacto prático e resultados mensuráveis</p>
+
+            <div class="experience-card">
+                <div class="exp-header">
+                    <h3>Web Designer Júnior / Desenvolvedora Web</h3>
+                    <span class="exp-period">Novembro 2024 – Atual</span>
+                </div>
+                <p class="exp-company"><strong>Desenhar Comunicação Visual</strong> – Sete Lagoas, MG</p>
+                <p class="exp-description">Desenvolvimento de soluções digitais internas voltadas para organização de pedidos, dados e processos operacionais.</p>
+                <ul class="exp-achievements">
+                    <li>Desenvolvimento de sistema interno de controle de pedidos utilizando React, TypeScript e Firebase</li>
+                    <li>Automação de processos operacionais reduzindo aproximadamente 30% do tempo de atividades manuais</li>
+                    <li>Criação de dashboards analíticos que aumentaram em 40% a visibilidade de indicadores operacionais</li>
+                    <li>Desenvolvimento de APIs RESTful com Node.js e Express, incluindo criação de endpoints e integração com banco de dados</li>
+                    <li>Organização e melhoria de fluxos digitais de atendimento e gestão de dados de clientes</li>
+                </ul>
             </div>
 
-            <section class="github-projects">
-                <h2><i class="fab fa-github"></i> Projetos no GitHub</h2>
-                <div class="project-list">
-                    <a href="https://github.com/anacostasouza/controle-pedidos" target="_blank" class="project-card">
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
                         <h3>Controle de Pedidos</h3>
-                        <p>
-                            Sistema web para gerenciamento de pedidos internos e terceirizados, com funcionalidades para edição de status, reagendamento de entregas e controle por responsáveis
-                        </p>
-                    </a>
-                    <a href="https://github.com/anacostasouza/raio-x-comunicacao-visual" target="_blank" class="project-card">
-                        <h3>Raio-X da Comunicação Visual</h3>
-                        <p>
-                            Este projeto é um quiz interativo desenvolvido para avaliar a percepção e consistência da identidade visual de empresas. A aplicação oferece uma análise rápida (raio-x) sobre logotipo, tipografia, paleta de cores, e outros elementos gráficos essenciais
-                            da marca.
-                        </p>
+                        <span class="project-year">2024</span>
+                    </div>
+                    <p class="project-description">Sistema web completo para gerenciamento de pedidos internos e terceirizados. Desenvolvimento de sistema interno com interface intuitiva para edição de status, reagendamento de entregas e controle por responsáveis.</p>
+                    <div class="project-details">
+                        <div class="detail-item">
+                            <strong>Resultado:</strong> Redução de 30% no tempo de processos manuais
+                        </div>
+                        <div class="detail-item">
+                            <strong>Impacto:</strong> Organização e otimização de fluxos operacionais da empresa
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">CSS3</span>
+                    </div>
+                    <a href="https://github.com/anacostasouza/controle-pedidos" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> Ver no GitHub
                     </a>
                 </div>
-            </section>
-        </aside>
 
-        <main class="right-panel">
-            <div class="container profile-card">
-                <nav class="botoes">
-                    <a href="https://www.linkedin.com/in/ana-souza-9831242bb/" target="_blank" rel="noopener noreferrer" class="botao"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                    <a href="mailto:anamariacostasouza93@gmail.com" class="botao"><i class="fas fa-envelope"></i> Email</a>
-                    <a href="tel:+5531999999999" class="botao"><i class="fas fa-phone-alt"></i> Contato</a>
-                    <a href="curriculo/ANACURRICULO.pdf" download="Ana Souza Curriculo" class="botao"><i class="fas fa-download"></i> Baixar Currículo</a>
-                </nav>
-
-                <section class="sobre-mim card-section">
-                    <h3><i class="fas fa-user"></i> Sobre Mim</h3>
-                    <p>Tenho 20 anos, nasci e cresci na cidade de Sete Lagoas, Minas Gerais. A tecnologia sempre foi meu objetivo e uma paixão que nasceu naturalmente da minha introspecção, gerando mais e mais vontade de adquirir conhecimento.</p>
-                    <p>Atualmente estou no terceiro semestre da faculdade de Análise e Desenvolvimento de Sistemas pela universidade UNA de Sete Lagoas.</p>
-                </section>
-
-                <section class="habilidades card-section">
-                    <h3><i class="fas fa-cogs"></i> Habilidades</h3>
-                    <ul>
-                        <li><i class="fas fa-database"></i> Firebase, SQL e Banco de Dados</li>
-                        <li><i class="fas fa-laptop-code"></i> Web Design (UX/UI), domínio de softwares como CorelDraw e Photoshop</li>
-                        <li><i class="fab fa-html5"></i> HTML, CSS e TypeScript, React, Vite</li>
-                        <li><i class="fab fa-java"></i> Conhecimento em Java</li>
-                    </ul>
-                </section>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Raio-X da Comunicação Visual</h3>
+                        <span class="project-year">2024</span>
+                    </div>
+                    <p class="project-description">Quiz interativo para avaliar percepção e consistência de identidade visual. Análise rápida (raio-x) sobre logotipo, tipografia, paleta de cores e elementos gráficos essenciais da marca.</p>
+                    <div class="project-details">
+                        <div class="detail-item">
+                            <strong>Funcionalidade:</strong> Quiz interativo com feedback de análise visual
+                        </div>
+                        <div class="detail-item">
+                            <strong>Foco:</strong> Avaliação de consistência de identidade visual de empresas
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">React</span>
+                        <span class="tag">UX/UI Design</span>
+                        <span class="tag">HTML5</span>
+                    </div>
+                    <a href="https://github.com/anacostasouza/raio-x-comunicacao-visual" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> Ver no GitHub
+                    </a>
+                </div>
             </div>
-        </main>
-    </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>© 2025 Ana Souza</p>
+    <!-- Contato -->
+    <section id="contato" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Vamos Conectar?</h2>
+            <p class="section-subtitle">Aberta a conversas sobre oportunidades e projetos interessantes</p>
+
+            <div class="contact-buttons">
+                <a href="mailto:anamariacostasouza93@gmail.com" class="contact-btn">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">anamariacostasouza93@gmail.com</span>
+                    </div>
+                </a>
+                <a href="https://wa.me/5531999999999" class="contact-btn">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <span class="contact-label">WhatsApp</span>
+                        <span class="contact-value">+55 31 9 7186-4360</span>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/ana-souzac" target="_blank" class="contact-btn">
+                    <i class="fab fa-linkedin"></i>
+                    <div>
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">linkedin.com/in/ana-souzac</span>
+                    </div>
+                </a>
+                <a href="https://github.com/anacostasouza" target="_blank" class="contact-btn">
+                    <i class="fab fa-github"></i>
+                    <div>
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">github.com/anacostasouza</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Ana Souza. Desenvolvido com muita dedicação.</p>
+            <div class="social-links">
+                <a href="https://github.com/anacostasouza" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ana-souzac" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/5531971864360" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
