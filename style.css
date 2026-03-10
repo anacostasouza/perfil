@@ -215,6 +215,10 @@ a:hover {
     width: 100%;
 }
 
+.hero-content h1 {
+    color: var(--text-secondary);
+}
+
 .hero-avatar {
     width: 280px;
     height: 280px;
